@@ -14,6 +14,9 @@ Gem::Specification.new do |spec|
   spec.description   = <<~MSG
     Wraps rendered templates with html comments showing the template path. Also
     throws in some meta tags which are easier to copy/paste in devtools.
+
+    To use, call `RailsTemplateDebugger.debug_templates`, e.g. in
+    config/environments/development.rb
   MSG
 
   spec.homepage      = "https://github.com/schpet/rails_template_debugger"
@@ -24,6 +27,7 @@ Gem::Specification.new do |spec|
   end
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "rails", "> 1"
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.0"

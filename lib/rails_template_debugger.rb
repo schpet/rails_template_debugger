@@ -13,10 +13,10 @@ module RailsTemplateDebugger
       # path_short = path.match(/app\/views\/(.*)/)&.captures&.first
 
       [
-        "<!-- START #{path} -->",
-        "<meta name='debug-template-start' path='#{path}' />",
+        "<!-- TEMPLATE START #{path} -->",
+        "<meta name='rails_template_debugger' path='#{path}' />",
         super,
-        "<!-- END #{path} -->"
+        "<!-- TEMPLATE END #{path} -->"
       ].join("\n").html_safe
     end
 
